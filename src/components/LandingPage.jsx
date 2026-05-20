@@ -15,7 +15,7 @@ import {
 
 const stats = [
   { icon: Users, value: "60+", label: "Teman Terhubung" },
-  { icon: GraduationCap, value: "Ilmu Komunikasi", label: "2018" },
+  { icon: GraduationCap, value: "IKOM", label: "2018" },
   { icon: Briefcase, value: "15+", label: "Sektor Industri" },
 ];
 
@@ -45,21 +45,21 @@ const spotlights = [
     name: "Alanis Rani Rayhana",
     role: "Alumni IKOM UPI 2018",
     quote:
-      "Jadi alumni Ilkom UPI bukan cuma soal gelar — tapi tentang cara berpikir kritis yang dibentuk sejak kelas pertama. Itu yang sampai sekarang paling terasa manfaatnya di dunia kerja.",
+      "Jadi alumni IKOM UPI bukan cuma soal gelar — tapi tentang cara berpikir kritis yang dibentuk sejak kelas pertama. Itu yang sampai sekarang paling terasa manfaatnya di dunia kerja.",
     initials: "AR",
   },
   {
     name: "Wanda Putri Rachmalita",
     role: "Alumni IKOM UPI 2018",
     quote:
-      "Ilkom 2018 ngajarin saya bahwa komunikasi itu bukan cuma bicara — tapi tentang memahami. Pelajaran itu yang bikin saya bertahan dan berkembang di industri yang terus berubah.",
+      "IKOM 2018 ngajarin saya bahwa komunikasi itu bukan cuma bicara — tapi tentang memahami. Pelajaran itu yang bikin saya bertahan dan berkembang di industri yang terus berubah.",
     initials: "WP",
   },
   {
     name: "Den Reza Alfian Farid",
     role: "Alumni IKOM UPI 2018",
     quote:
-      "Yang paling berharga dari Ilkom bukan hanya ilmunya, tapi orangnya. Angkatan 2018 itu penuh orang-orang yang saling menguatkan — dan energi itu masih terasa sampai sekarang.",
+      "Yang paling berharga dari IKOM bukan hanya ilmunya, tapi orangnya. Angkatan 2018 itu penuh orang-orang yang saling menguatkan — dan energi itu masih terasa sampai sekarang.",
     initials: "DR",
   },
 ];
@@ -222,8 +222,8 @@ export default function LandingPage() {
               <span className="mb-4 block font-serif text-7xl leading-none text-amber-500/30 select-none">
                 "
               </span>
-              <blockquote className="-mt-8 text-lg font-medium leading-relaxed text-stone-200 md:text-xl">
-                Teman-teman Ilkom 2018 yang luar biasa — perjalanan kita bersama
+              <blockquote className="-mt-8 text-justify text-lg font-medium leading-relaxed text-stone-200 md:text-xl">
+                Teman-teman IKOM 2018 yang luar biasa — perjalanan kita bersama
                 tidak berhenti di hari wisuda. Kita sudah membuktikan bahwa dari
                 satu angkatan bisa lahir jurnalis, analis, kreator, pendidik,
                 pengusaha, dan banyak lagi. Platform ini hadir supaya koneksi kita
@@ -272,23 +272,18 @@ export default function LandingPage() {
       <footer className="bg-stone-950 px-6 py-8">
         <div className="mx-auto flex max-w-5xl flex-col items-center justify-between gap-4 sm:flex-row">
           <p className="text-sm text-stone-500">
-            © 2026 Ilmu Komunikasi UPI 2018. All rights reserved.
+            © 2026 IKOM UPI 2018. All rights reserved.
           </p>
 
           <div className="flex items-center gap-4">
             <a
-              href="#"
+              href="https://www.instagram.com/ikomupi2018/"
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label="Instagram"
               className="text-stone-600 transition-colors hover:text-amber-500"
             >
               <Instagram className="h-5 w-5" />
-            </a>
-            <a
-              href="#"
-              aria-label="LinkedIn"
-              className="text-stone-600 transition-colors hover:text-amber-500"
-            >
-              <Linkedin className="h-5 w-5" />
             </a>
           </div>
         </div>

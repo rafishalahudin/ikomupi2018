@@ -17,13 +17,17 @@ export default function Navbar() {
     <nav className="fixed top-0 z-50 w-full border-b border-white/8 bg-stone-950/90 backdrop-blur-md">
       <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
         {/* Logo */}
-        <Link to="/" className="flex items-center">
+        <Link to="/" className="flex items-center gap-2.5">
           <img
             src="/logo.png"
             alt="IKOM 18"
             className="h-9 w-auto"
             style={{ mixBlendMode: "screen" }}
           />
+          <div className="flex flex-col leading-tight">
+            <span className="text-xs font-bold tracking-widest text-stone-200">ILMU KOMUNIKASI</span>
+            <span className="text-xs font-medium tracking-widest text-amber-500">ANGKATAN 2018</span>
+          </div>
         </Link>
 
         {/* Desktop links */}

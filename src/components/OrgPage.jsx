@@ -21,9 +21,9 @@ const struktur = {
       warna: "amber",
       anggota: [
         { jabatan: "Koordinator", nama: "Wanda Putri Rachmalita", initials: "WP" },
-        { jabatan: "Anggota", nama: "Rhoby Rhamadhan Ajadeta", initials: "RR" },
-        { jabatan: "Anggota", nama: "Salma Hanifah Dyanti", initials: "SH" },
-        { jabatan: "Anggota", nama: "Daafiq Dahdal Rabbani", initials: "DD" },
+        { jabatan: "Anggota", nama: "Mochamad Marcellodiansyah", initials: "MM" },
+        { jabatan: "Anggota", nama: "Reva Girvan Respati", initials: "RG" },
+        { jabatan: "Anggota", nama: "Zaky Naufal Arsyad", initials: "ZN" },
       ],
     },
     {
@@ -31,8 +31,8 @@ const struktur = {
       warna: "orange",
       anggota: [
         { jabatan: "Koordinator", nama: "Novie Herdyanti Putri", initials: "NH" },
-        { jabatan: "Anggota", nama: "Fannisa Yurianti", initials: "FY" },
-        { jabatan: "Anggota", nama: "Ahmad Ghifari", initials: "AG" },
+        { jabatan: "Anggota", nama: "Arina Khairani Attamimy", initials: "AK" },
+        { jabatan: "Anggota", nama: "Renanda Dwina Putri", initials: "RD" },
         { jabatan: "Anggota", nama: "Febbi Anggraeni", initials: "FA" },
       ],
     },
@@ -41,9 +41,9 @@ const struktur = {
       warna: "yellow",
       anggota: [
         { jabatan: "Koordinator", nama: "Muhammad Rafi Shalahudin", initials: "MR" },
-        { jabatan: "Anggota", nama: "Namira Fazrin Zamzami", initials: "NF" },
-        { jabatan: "Anggota", nama: "Muhammad Jeepsal Putra P.", initials: "MJ" },
-        { jabatan: "Anggota", nama: "Piggi Cahya Muhamad", initials: "PC" },
+        { jabatan: "Anggota", nama: "Dinda Dania Nadine Asy Syifa", initials: "DD" },
+        { jabatan: "Anggota", nama: "Yossi Yonida", initials: "YY" },
+        { jabatan: "Anggota", nama: "Daafiq Dahdal Rabbani", initials: "DD" },
       ],
     },
     {
@@ -52,8 +52,8 @@ const struktur = {
       anggota: [
         { jabatan: "Koordinator", nama: "Fathia Islamiyatul Syahida", initials: "FI" },
         { jabatan: "Anggota", nama: "Nadiyatulkhair", initials: "NA" },
-        { jabatan: "Anggota", nama: "Anggreini Tampubolon", initials: "AT" },
-        { jabatan: "Anggota", nama: "Devi Puspitasari", initials: "DP" },
+        { jabatan: "Anggota", nama: "Regine Deanaendra Hasnoro", initials: "RD" },
+        { jabatan: "Anggota", nama: "Savana Maulahela", initials: "SM" },
       ],
     },
     {
@@ -61,9 +61,9 @@ const struktur = {
       warna: "red",
       anggota: [
         { jabatan: "Koordinator", nama: "Rizqi Abdul Azis", initials: "RA" },
-        { jabatan: "Anggota", nama: "Daffa Bahauddin Robbani", initials: "DB" },
-        { jabatan: "Anggota", nama: "Savana Maulahela", initials: "SM" },
-        { jabatan: "Anggota", nama: "Arina Khairani Attamimy", initials: "AK" },
+        { jabatan: "Anggota", nama: "Anggreini Tampubolon", initials: "AT" },
+        { jabatan: "Anggota", nama: "Indira Kirani Putri", initials: "IK" },
+        { jabatan: "Anggota", nama: "Cecep Abdurrohman Malik I.", initials: "CA" },
       ],
     },
   ],

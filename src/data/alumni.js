@@ -662,7 +662,7 @@ export const alumni = [
     perusahaan: "IKOM UPI 2018",
     industri: "NGO & Sosial",
     kota: "Bandung",
-    bio: "Ketua Angkatan Ilmu Komunikasi UPI 2018. Aktif di komunitas dan pengembangan jejaring alumni.",
+    bio: "Ketua Angkatan IKOM UPI 2018. Aktif di komunitas dan pengembangan jejaring alumni.",
     linkedin: null, instagram: null, whatsapp: null, email: null,
     bergabung_at: "2024-01-01",
   },
