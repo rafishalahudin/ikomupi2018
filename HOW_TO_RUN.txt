@@ -7,6 +7,11 @@ REQUIREMENTS
 - npm (comes with Node.js)
 
 
+NAVIGATE TO PROJECT FOLDER
+---------------------------
+  cd "/Users/rafi/Documents/AIKU Website"
+
+
 INSTALL DEPENDENCIES (first time only)
 ---------------------------------------
   npm install
