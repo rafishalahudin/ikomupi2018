@@ -558,6 +558,16 @@ export default function AdArtPage() {
           </div>
         </main>
 
+        <div className="px-6 pb-14 flex justify-center">
+          <a
+            href="/calon-ketua"
+            className="inline-flex items-center gap-2 rounded-full border border-amber-500/30 bg-amber-500/10 px-6 py-3 text-sm font-medium text-amber-400 transition-colors hover:bg-amber-500/20"
+          >
+            <Crown className="h-4 w-4" />
+            Lihat Laman Calon Ketua
+          </a>
+        </div>
+
         <footer className="border-t border-white/8 px-6 py-7">
           <p className="text-center text-sm text-stone-600">© 2026 IKOM UPI 2018. All rights reserved.</p>
         </footer>
