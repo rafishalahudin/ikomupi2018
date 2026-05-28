@@ -183,6 +183,21 @@ export default function LandingPage() {
             <span className="text-amber-400">Membangun Kolaborasi.</span>
           </h1>
 
+          <div className="mb-8 flex items-center justify-center gap-2">
+            <span className="text-xl font-black text-amber-400">#</span>
+            <span className="text-sm font-bold uppercase tracking-[0.18em] text-stone-300 sm:text-base">
+              Terhubung
+            </span>
+            <span className="text-amber-500/50">·</span>
+            <span className="text-sm font-bold uppercase tracking-[0.18em] text-stone-300 sm:text-base">
+              Tumbuh
+            </span>
+            <span className="text-amber-500/50">·</span>
+            <span className="text-sm font-bold uppercase tracking-[0.18em] text-stone-300 sm:text-base">
+              Terdampak
+            </span>
+          </div>
+
           <p className="mx-auto mb-10 max-w-xl text-base leading-relaxed text-stone-400 md:text-lg">
             Wadah resmi jaringan Ilmu Komunikasi UPI 2018. Tetap terhubung
             dengan teman seangkatan, kembangkan karir, dan bangun sinergi

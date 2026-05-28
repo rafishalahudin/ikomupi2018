@@ -728,6 +728,15 @@ export default function CecepPage() {
                 <span className="block animate-[fadeUp_0.7s_ease-out_0.12s_both]">Abdurrohman</span>
                 <span className="block animate-[fadeUp_0.7s_ease-out_0.19s_both] italic text-amber-400">Malik Ibrahim</span>
               </h1>
+              <div className="mt-6 flex animate-[fadeUp_0.7s_ease-out_0.24s_both] flex-wrap items-center gap-2">
+                <span className="text-xl font-black text-amber-400">#</span>
+                <span className="text-sm font-bold uppercase tracking-[0.18em] text-stone-400">Terhubung</span>
+                <span className="text-amber-500/50">·</span>
+                <span className="text-sm font-bold uppercase tracking-[0.18em] text-stone-400">Tumbuh</span>
+                <span className="text-amber-500/50">·</span>
+                <span className="text-sm font-bold uppercase tracking-[0.18em] text-stone-400">Terdampak</span>
+              </div>
+
               <p className="mt-7 max-w-xl animate-[fadeUp_0.7s_ease-out_0.28s_both] text-base leading-relaxed text-stone-400 md:text-lg">
                 Membangun AIKU untuk memberikan dampak yang lebih luas — bagi
                 <span className="text-stone-200"> alumni, mahasiswa, dan civitas program studi</span>.
