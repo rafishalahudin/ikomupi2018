@@ -727,12 +727,14 @@ export default function CecepPage() {
                 <span className="block animate-[fadeUp_0.7s_ease-out_0.12s_both]">Abdurrohman</span>
                 <span className="block animate-[fadeUp_0.7s_ease-out_0.19s_both] italic text-amber-400">Malik Ibrahim</span>
               </h1>
-              <p className="mt-7 max-w-md animate-[fadeUp_0.7s_ease-out_0.28s_both] text-base leading-relaxed text-stone-400 md:text-lg">
-                Membangun AIKU yang relevan, inklusif, dan berdampak — lewat
-                <span className="text-stone-200"> diagnosis yang jujur</span>,
-                <span className="text-stone-200"> fondasi yang kuat</span>, dan
-                <span className="text-stone-200"> kepemimpinan kolaboratif </span>
-                lintas angkatan.
+              <p className="mt-7 max-w-xl animate-[fadeUp_0.7s_ease-out_0.28s_both] text-base leading-relaxed text-stone-400 md:text-lg">
+                Membangun AIKU untuk memberikan dampak yang lebih luas — bagi
+                <span className="text-stone-200"> alumni, mahasiswa, dan civitas program studi</span>.
+                Ikatan alumni yang <span className="text-stone-200">menguatkan</span>,
+                <span className="text-stone-200"> berbagi peluang karir</span>, dan
+                <span className="text-stone-200"> tumbuh bersama </span>
+                meski sudah jauh dari ruang kampus. Itulah yang ingin kita wujudkan, dan
+                <span className="text-stone-200"> kita mulai dari sekarang</span>.
               </p>
               <div className="mt-9 flex animate-[fadeUp_0.7s_ease-out_0.36s_both] flex-wrap items-center gap-3">
                 <a href="#visi" onClick={jump("visi")} className="group inline-flex items-center gap-2 rounded-full bg-amber-500 px-6 py-3 text-sm font-semibold text-stone-950 transition-colors hover:bg-amber-400">
