@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 import {
   Target,
   Zap,
@@ -1152,6 +1153,18 @@ export default function CecepPage() {
                 <span className="h-px w-12 bg-amber-500/40" />
                 <p className="mt-5 font-display text-xl font-medium text-[#f5efe6]">Cecep Abdurrohman Malik Ibrahim</p>
                 <p className="mt-1 text-sm text-amber-400">Calon Ketua AIKU · Ilmu Komunikasi UPI 2018</p>
+              </div>
+
+              <div className="mt-12 border-t border-white/8 pt-10">
+                <p className="mb-5 text-sm text-stone-500">Pelajari pedoman dasar organisasi yang diusulkan</p>
+                <Link
+                  to="/ad-art"
+                  className="group inline-flex items-center gap-2.5 rounded-full border border-amber-500/30 bg-amber-500/[0.06] px-6 py-3 text-sm font-semibold text-amber-300 transition-colors hover:bg-amber-500/15"
+                >
+                  <FileText className="h-4 w-4" />
+                  AD/ART, GBHO &amp; Struktur Organisasi
+                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+                </Link>
               </div>
             </Reveal>
           </div>
