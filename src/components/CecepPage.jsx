@@ -26,9 +26,229 @@ import {
   BookOpen,
   Award,
   Handshake,
+  Mic2,
+  Radio,
+  Trophy,
+  FolderOpen,
+  Mail,
+  Linkedin,
+  MapPin,
+  Monitor,
 } from "lucide-react";
 
 // ─── Data ──────────────────────────────────────────────────────────────────────
+
+const workExperiences = [
+  {
+    org: "TVRI Jawa Barat",
+    location: "Bandung",
+    period: "Jan 2024 – Sekarang",
+    role: "TV Presenter",
+    icon: Monitor,
+    color: "amber",
+    points: [
+      "Membawakan program berita: Jawa Barat Hari Ini, Global National News, dan Kalawarta",
+      "Menjadi host program Musix Box dan Pesona Desa",
+    ],
+  },
+  {
+    org: "Al-Wafa Vocational High School",
+    location: "Bandung",
+    period: "Agu 2023 – Sekarang",
+    role: "Guru Bahasa Inggris, Broadcasting & Film",
+    icon: GraduationCap,
+    color: "blue",
+    points: [
+      "Mengajar Bahasa Inggris untuk siswa Tourism",
+      "Mengajar Dasar-Dasar Broadcasting dan Film",
+      "Menggali potensi siswa dalam akting dan menulis",
+    ],
+  },
+  {
+    org: "Armidale English College (AEC)",
+    location: "Bandung",
+    period: "Sep 2022 – Sekarang",
+    role: "Guru Bahasa Inggris & Drama",
+    icon: BookOpen,
+    color: "green",
+    points: [
+      "Mengajar Bahasa Inggris untuk siswa SD, SMP, dan SMA",
+      "Menggali potensi siswa dalam drama, menulis, storytelling, dan broadcasting",
+    ],
+  },
+  {
+    org: "Rumah Belajar Masagi",
+    location: "Bandung",
+    period: "Apr 2023 – Sep 2024",
+    role: "Guru Bahasa Inggris",
+    icon: BookOpen,
+    color: "teal",
+    points: [
+      "Mengajar Bahasa Inggris untuk siswa SD",
+      "Fokus pada pembangunan karakter siswa",
+    ],
+  },
+  {
+    org: "Radio Republik Indonesia (RRI)",
+    location: "Bandung",
+    period: "Agu 2021 – Agu 2022",
+    role: "Announcer & Presenter Pro 1",
+    icon: Radio,
+    color: "purple",
+    points: [
+      "Sukses memandu dialog dengan Area Manager PT Pertamina, Executive Manager Bandara Husein Sastranegara, Kepala Dinas Perhubungan Jabar, Kepala Dinas Pendidikan Jabar, Kapolres Tasikmalaya, Kapendam III Siliwangi, Ketua PMI Subang, dan lainnya",
+      "Membawakan program musik Indonesia dan Barat era 1980–1990",
+      "Memimpin event eksternal: Obrolan Budaya, Dialog Luar Studio, Ulang Tahun RRI, dan lainnya",
+    ],
+  },
+  {
+    org: "Studio East Radio",
+    location: "Bandung",
+    period: "Feb 2019 – Apr 2019",
+    role: "Announcer",
+    icon: Radio,
+    color: "orange",
+    points: ["Membawakan program musik"],
+  },
+  {
+    org: "Garuda Visual Radio",
+    location: "Bandung",
+    period: "Mei 2020 – Agu 2020",
+    role: "Announcer",
+    icon: Radio,
+    color: "rose",
+    points: ["Membawakan program musik yang juga di-streaming di Youtube"],
+  },
+  {
+    org: "Tri Indonesia",
+    location: "Bandung",
+    period: "Agu 2018 – Sep 2018",
+    role: "Freelance Marketing Tri Ibadah",
+    icon: Briefcase,
+    color: "blue",
+    points: [
+      "Menghubungkan perusahaan dengan 10 KBIH di Kabupaten Bandung",
+      "Mempresentasikan produk di hadapan ratusan Jamaah Haji",
+    ],
+  },
+  {
+    org: "Pembicara / Speaker",
+    location: "Berbagai Kota",
+    period: "2019 – Sekarang",
+    role: "Public Speaking, English & Ambassador Class",
+    icon: Mic2,
+    color: "amber",
+    points: [
+      "Dicofest Telkom University 2025, Weupgrade 2025, Mojang Jajaka Kab. Bandung 2025",
+      "Public Speaking Class ASM Ariyanti 2020, Himpunan Matematika UPI 2020",
+      "English Class Pretty Digital PR Telkom University, Juri Public Speaking Kalam UPI 2019",
+      "Ambassador Class Putera Puteri ASM Ariyanti 2020, dan banyak lainnya",
+    ],
+  },
+  {
+    org: "Master of Ceremony / Moderator / Voice Over",
+    location: "Berbagai Kota",
+    period: "2019 – Sekarang",
+    role: "MC, Moderator & Voice Over Professional",
+    icon: Mic2,
+    color: "green",
+    points: [
+      "MC: FFBN ISBI 2021–2024, Grand Final Mojang Jajaka Kab. Bandung 2025, GF Mojang Jajaka Kota Cimahi 2022–2023, Padjajaran MUN 2019, Asia Education UPI 2021–2022, Asean Geo-Smart Competition UPI 2019, Gebyar Pariwisata Disbudpar Kab. Bandung 2022, dan lainnya",
+      "Moderator: SDGs Week AIESEC Bandung 2020, Literasi Digital & Entrepreneur Millenial UPI 2019, Lingkar Psikologi 2022, AEC's Talk 2022, Kajian KSE UPI 2021, dan lainnya",
+      "Voice Over: Ilomata Foundation Jakarta, Dinas DPPKB Kota Bandung, LKP Hedys Bandung, Promosi Pariwisata Kab. Bandung, Penghargaan Disparbud Kota Bandung 2022, dan lainnya",
+    ],
+  },
+];
+
+const formalEducation = [
+  {
+    school: "Universitas Padjadjaran Bandung",
+    degree: "S1 Ilmu Komunikasi",
+    period: "Agu 2025 – Sekarang",
+    notes: ["Mahasiswa aktif"],
+  },
+  {
+    school: "Universitas Pendidikan Indonesia",
+    degree: "S1 Ilmu Komunikasi",
+    period: "Agu 2018 – Agu 2022",
+    notes: [
+      "Mahasiswa Berprestasi FPIPS UPI 2021",
+      "Local Volunteer I-Care For Disabled AIESEC Bandung 2020",
+      "Penerima Beasiswa KSE UPI 2021",
+    ],
+  },
+  {
+    school: "SMAN 1 Margahayu",
+    degree: "SMA",
+    period: "2015 – 2018",
+    notes: [
+      "Siswa Berprestasi SMAN 1 Margahayu",
+      "Juara 3 Taekwondo Poomsae – POPDA Jabar XI 2016",
+      "Juara 1 Kompetisi Menyanyi FLS2N Kabupaten Bandung",
+    ],
+  },
+];
+
+const informalEducation = [
+  {
+    school: "Djarie Public Speaking and Broadcasting School",
+    period: "Sep 2018 – Nov 2018",
+    desc: "Public speaking profesional dan Radio Announcer & TV Presenter",
+  },
+  {
+    school: "Armidale English College",
+    period: "Okt 2014 – Okt 2022",
+    desc: "Lulus level Intermediate: Structure, Comprehension, Listening, Composition, dan Conversation",
+  },
+  {
+    school: "Wallstreet English",
+    period: "Nov 2019 – Des 2019",
+    desc: "Praktik bahasa Inggris dengan native speaker dari Australia",
+  },
+];
+
+const projects = [
+  {
+    name: "DeCamps Project",
+    period: "Jan 2023 – Sekarang",
+    desc: "Sebagai founder, membantu siswa dari desa terpencil di Kab. Bandung meraih mimpi dengan pendidikan lebih baik. Menjalankan kampanye 'Act Locally, Think Globally'.",
+    icon: Globe,
+  },
+  {
+    name: "Book Launching Miss Universe 2005 – Natalie Glebova",
+    period: "Okt 2018",
+    desc: "PIC tamu undangan (Indonesian Models, Actress, dan Puteri Indonesia).",
+    icon: Star,
+  },
+  {
+    name: "World Autism Day – Biruku Indonesia",
+    period: "Apr 2020",
+    desc: "Menggagas 'Disabled Children Art Exhibition' dan International Autism Conference.",
+    icon: Heart,
+  },
+  {
+    name: "We Care Project",
+    period: "Sep 2021",
+    desc: "Kolaborasi dengan Biruku Indonesia dan SLB Wartawan Bandung — menggalang dana untuk pembiayaan kesehatan anak disabilitas di Bandung.",
+    icon: Users,
+  },
+];
+
+const organizations = [
+  { name: "AEC Magazine", period: "Jan 2023 – Sekarang", role: "Supervisor" },
+  { name: "Paguyuban Mojang Jajaka Kabupaten Bandung", period: "Agu 2018 – Nov 2019", role: "Alumni & Staf Divisi Event" },
+  { name: "PPBS UPI", period: "Mei 2020 – Nov 2020", role: "Staf Divisi Event" },
+  { name: "Beasiswa KSE UPI", period: "Agu 2021 – Sep 2022", role: "Ketua Divisi Pendidikan" },
+  { name: "Paduan Suara Mahasiswa UPI", period: "Feb 2020 – Apr 2021", role: "Ketua Divisi Event Eksternal" },
+  { name: "AEC Troopers", period: "Mar 2020 – Mar 2021", role: "Ketua Divisi Public Relation" },
+];
+
+const achievements = [
+  "Jajaka Harapan III Kabupaten Bandung 2017 (Duta Pariwisata Kab. Bandung)",
+  "Juara 1 PPBS UPI 2019 (Duta Kampus Universitas Pendidikan Indonesia)",
+  "Juara 1 International Glocal Young Leadership 2021 (Kolaborasi Indonesia–Korea)",
+  "Juara Indomie VO Jamming 2020 (Kompetisi Voice Over oleh PT Indofood)",
+];
 
 const visi =
   "Membangun AIKU sebagai wadah alumni yang relevan, inklusif, dan berdampak nyata — bagi anggotanya, almamater, dan masyarakat luas.";
@@ -314,6 +534,40 @@ const colorMap = {
 
 // ─── Sub-components ────────────────────────────────────────────────────────────
 
+function WorkCard({ exp }) {
+  const [open, setOpen] = useState(false);
+  const c = colorMap[exp.color] || colorMap.amber;
+  return (
+    <div className={`rounded-2xl border ${c.border} ${c.bg} overflow-hidden transition-all`}>
+      <button className="flex w-full items-start gap-4 p-5 text-left" onClick={() => setOpen((v) => !v)}>
+        <div className={`mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-xl ${c.bg} border ${c.border}`}>
+          <exp.icon className={`h-4 w-4 ${c.icon}`} />
+        </div>
+        <div className="flex-1 min-w-0">
+          <div className="flex flex-wrap items-center gap-2">
+            <p className="font-semibold text-white text-sm">{exp.org}</p>
+            <span className="text-stone-600 text-xs hidden sm:inline">·</span>
+            <span className="text-stone-500 text-xs">{exp.location}</span>
+          </div>
+          <p className={`text-xs font-medium mt-0.5 ${c.icon}`}>{exp.role}</p>
+          <p className="text-xs text-stone-600 mt-0.5">{exp.period}</p>
+        </div>
+        {open ? <ChevronUp className="h-4 w-4 text-stone-500 shrink-0 mt-1" /> : <ChevronDown className="h-4 w-4 text-stone-500 shrink-0 mt-1" />}
+      </button>
+      {open && (
+        <ul className="border-t border-white/5 px-5 pb-5 pt-3 space-y-2">
+          {exp.points.map((p, i) => (
+            <li key={i} className="flex items-start gap-2 text-sm text-stone-300 leading-relaxed">
+              <ArrowRight className={`mt-0.5 h-3.5 w-3.5 shrink-0 ${c.icon} opacity-70`} />
+              {p}
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  );
+}
+
 function SectionLabel({ children }) {
   return (
     <p className="mb-4 text-center text-xs font-semibold uppercase tracking-widest text-amber-500">
@@ -516,6 +770,164 @@ export default function CecepPage() {
                 {tag}
               </span>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Profil & Kredibilitas ─────────────────────────────────────────── */}
+      <section className="border-t border-white/5 bg-stone-950 px-6 py-20">
+        <div className="mx-auto max-w-5xl">
+          <SectionLabel>Profil Calon</SectionLabel>
+          <SectionHeading>Kredibilitas &amp; Pengalaman</SectionHeading>
+          <SectionSub>
+            Rekam jejak profesional yang relevan dengan kepemimpinan, komunikasi, dan pengorganisasian.
+          </SectionSub>
+
+          {/* About + Contact */}
+          <div className="mt-10 rounded-2xl border border-white/8 bg-stone-900 p-7">
+            <div className="flex flex-wrap gap-4 mb-5 text-sm text-stone-400">
+              <span className="flex items-center gap-1.5"><MapPin className="h-4 w-4 text-amber-400" /> Bandung</span>
+              <a href="https://www.linkedin.com/in/cecepmalik" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 hover:text-amber-400 transition-colors">
+                <Linkedin className="h-4 w-4 text-amber-400" /> linkedin.com/in/cecepmalik
+              </a>
+              <a href="mailto:abdurrahman.cecep16@gmail.com" className="flex items-center gap-1.5 hover:text-amber-400 transition-colors">
+                <Mail className="h-4 w-4 text-amber-400" /> abdurrahman.cecep16@gmail.com
+              </a>
+            </div>
+            <p className="text-sm leading-relaxed text-stone-300">
+              Fast learner dengan passion di bidang sosial dan budaya. Berpengalaman dalam Public Speaking, Radio Broadcasting, dan Event Organizing. Saat ini aktif sebagai guru Bahasa Inggris, Broadcasting, dan Film untuk siswa SD, SMP, dan SMA di sekolah formal dan informal di Bandung.
+            </p>
+          </div>
+
+          {/* Pengalaman Kerja */}
+          <div className="mt-10">
+            <h3 className="mb-5 flex items-center gap-2 text-base font-semibold text-white">
+              <Briefcase className="h-5 w-5 text-amber-400" /> Pengalaman Kerja
+            </h3>
+            <div className="space-y-3">
+              {workExperiences.map((exp, i) => <WorkCard key={i} exp={exp} />)}
+            </div>
+          </div>
+
+          {/* Pendidikan */}
+          <div className="mt-10 grid gap-6 md:grid-cols-2">
+            {/* Formal */}
+            <div>
+              <h3 className="mb-4 flex items-center gap-2 text-base font-semibold text-white">
+                <GraduationCap className="h-5 w-5 text-amber-400" /> Pendidikan Formal
+              </h3>
+              <div className="space-y-3">
+                {formalEducation.map((edu, i) => (
+                  <div key={i} className="rounded-xl border border-white/8 bg-stone-900 p-5">
+                    <p className="font-semibold text-white text-sm">{edu.school}</p>
+                    <p className="text-xs text-amber-400 mt-0.5">{edu.degree}</p>
+                    <p className="text-xs text-stone-500 mt-0.5">{edu.period}</p>
+                    {edu.notes.length > 0 && (
+                      <ul className="mt-3 space-y-1.5">
+                        {edu.notes.map((n, j) => (
+                          <li key={j} className="flex items-start gap-2 text-xs text-stone-400">
+                            <CheckCircle2 className="mt-0.5 h-3.5 w-3.5 shrink-0 text-amber-500/60" />
+                            {n}
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Informal */}
+            <div>
+              <h3 className="mb-4 flex items-center gap-2 text-base font-semibold text-white">
+                <BookOpen className="h-5 w-5 text-amber-400" /> Pendidikan Informal
+              </h3>
+              <div className="space-y-3">
+                {informalEducation.map((edu, i) => (
+                  <div key={i} className="rounded-xl border border-white/8 bg-stone-900 p-5">
+                    <p className="font-semibold text-white text-sm">{edu.school}</p>
+                    <p className="text-xs text-stone-500 mt-0.5">{edu.period}</p>
+                    <p className="mt-2 text-xs leading-relaxed text-stone-400">{edu.desc}</p>
+                  </div>
+                ))}
+              </div>
+
+              {/* Prestasi */}
+              <h3 className="mb-4 mt-6 flex items-center gap-2 text-base font-semibold text-white">
+                <Trophy className="h-5 w-5 text-amber-400" /> Prestasi
+              </h3>
+              <div className="space-y-2">
+                {achievements.map((a, i) => (
+                  <div key={i} className="flex items-start gap-2.5 rounded-xl border border-amber-500/15 bg-amber-500/5 px-4 py-3">
+                    <Star className="mt-0.5 h-3.5 w-3.5 shrink-0 text-amber-400" />
+                    <p className="text-xs leading-relaxed text-stone-300">{a}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Proyek & Organisasi */}
+          <div className="mt-10 grid gap-6 md:grid-cols-2">
+            <div>
+              <h3 className="mb-4 flex items-center gap-2 text-base font-semibold text-white">
+                <FolderOpen className="h-5 w-5 text-amber-400" /> Proyek
+              </h3>
+              <div className="space-y-3">
+                {projects.map((p, i) => (
+                  <div key={i} className="rounded-xl border border-white/8 bg-stone-900 p-5">
+                    <div className="flex items-start gap-3">
+                      <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-amber-500/10 text-amber-400">
+                        <p.icon className="h-4 w-4" />
+                      </div>
+                      <div>
+                        <p className="font-semibold text-white text-sm">{p.name}</p>
+                        <p className="text-xs text-stone-500 mt-0.5">{p.period}</p>
+                        <p className="mt-2 text-xs leading-relaxed text-stone-400">{p.desc}</p>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <h3 className="mb-4 flex items-center gap-2 text-base font-semibold text-white">
+                <Network className="h-5 w-5 text-amber-400" /> Organisasi & Kepanitiaan
+              </h3>
+              <div className="space-y-2">
+                {organizations.map((o, i) => (
+                  <div key={i} className="rounded-xl border border-white/8 bg-stone-900 px-5 py-4">
+                    <p className="font-semibold text-white text-sm">{o.name}</p>
+                    <p className="text-xs text-amber-400 mt-0.5">{o.role}</p>
+                    <p className="text-xs text-stone-600 mt-0.5">{o.period}</p>
+                  </div>
+                ))}
+              </div>
+
+              {/* Skills */}
+              <h3 className="mb-4 mt-6 flex items-center gap-2 text-base font-semibold text-white">
+                <Zap className="h-5 w-5 text-amber-400" /> Skills
+              </h3>
+              <div className="rounded-xl border border-white/8 bg-stone-900 p-5 space-y-4">
+                <div>
+                  <p className="text-xs font-semibold text-stone-500 uppercase tracking-wider mb-2">Soft Skills</p>
+                  <div className="flex flex-wrap gap-2">
+                    {["Public Speaking", "Leadership", "Management", "Negotiating", "Casting Director", "Problem Solving", "Bahasa Inggris (Intermediate)"].map((s) => (
+                      <span key={s} className="rounded-full bg-amber-500/10 px-3 py-1 text-xs font-medium text-amber-300 ring-1 ring-amber-500/20">{s}</span>
+                    ))}
+                  </div>
+                </div>
+                <div>
+                  <p className="text-xs font-semibold text-stone-500 uppercase tracking-wider mb-2">Hard Skills</p>
+                  <div className="flex flex-wrap gap-2">
+                    {["Microsoft Office", "Adobe Premiere Pro", "Adobe Photoshop", "Audacity", "Canva"].map((s) => (
+                      <span key={s} className="rounded-full bg-stone-800 px-3 py-1 text-xs font-medium text-stone-300 ring-1 ring-white/8">{s}</span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

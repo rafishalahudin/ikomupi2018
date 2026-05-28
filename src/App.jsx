@@ -18,6 +18,7 @@ const Admin = lazy(() => import("./components/Admin"));
 const Events = lazy(() => import("./components/Events"));
 const SetelahToga = lazy(() => import("./components/SetelahToga"));
 const PostPage = lazy(() => import("./components/PostPage"));
+const KarirPage = lazy(() => import("./components/KarirPage"));
 
 function Layout() {
   const { pathname } = useLocation();
@@ -38,6 +39,7 @@ function Layout() {
           <Route path="/events" element={<Events />} />
           <Route path="/setelah-toga" element={<SetelahToga />} />
           <Route path="/setelah-toga/:slug" element={<PostPage />} />
+          <Route path="/karir" element={<KarirPage />} />
         </Routes>
       </Suspense>
     </>

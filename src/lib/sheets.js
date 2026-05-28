@@ -4,6 +4,7 @@ const SHEET_ID = "1mFUEZRRmr6cnmQ7Cbqo5WePQb9cuzKgTx7c6MIhw07w";
 const TAB_NAME = "1";
 const BLOG_TAB = "setelah-toga";
 const EVENTS_TAB = "events";
+const LOWONGAN_TAB = "lowongan";
 
 const mockPosts = [
   {
@@ -148,6 +149,73 @@ export async function fetchEvents() {
     }));
   } catch {
     return mockEvents;
+  }
+}
+
+const mockLowongan = [
+  {
+    id: "1",
+    judul: "Content Strategist",
+    perusahaan: "Kreasi Digital Studio",
+    industri: "Kreatif & Advertising",
+    tipe: "Full-time",
+    kota: "Jakarta",
+    deskripsi: "Mencari content strategist yang berpengalaman dalam perencanaan konten media sosial dan kampanye digital. Preferensi kandidat dengan background komunikasi.",
+    kontak: "628111234567",
+    poster_nama: "Alanis Rani Rayhana",
+    deadline: "2026-06-30",
+    created_at: "2026-05-20",
+  },
+  {
+    id: "2",
+    judul: "PR & Communications Intern",
+    perusahaan: "StartupKu Indonesia",
+    industri: "Startup",
+    tipe: "Magang",
+    kota: "Bandung",
+    deskripsi: "Magang 3 bulan di divisi PR & Komunikasi. Tugas meliputi press release, media monitoring, dan koordinasi event. Cocok untuk mahasiswa tingkat akhir atau fresh graduate.",
+    kontak: "628129876543",
+    poster_nama: "Wanda Putri Rachmalita",
+    deadline: "2026-06-15",
+    created_at: "2026-05-18",
+  },
+  {
+    id: "3",
+    judul: "Copywriter Freelance",
+    perusahaan: "Various Clients",
+    industri: "Kreatif & Advertising",
+    tipe: "Freelance",
+    kota: "Remote",
+    deskripsi: "Dibutuhkan copywriter freelance untuk project-project jangka pendek. Rate kompetitif, jadwal fleksibel. Ada referral dari alumni IKOM 2018.",
+    kontak: "628135556789",
+    poster_nama: "Den Reza Alfian Farid",
+    deadline: "2026-07-01",
+    created_at: "2026-05-22",
+  },
+];
+
+export async function fetchLowongan() {
+  const url = `https://opensheet.elk.sh/${SHEET_ID}/${LOWONGAN_TAB}`;
+  try {
+    const res = await fetch(url);
+    if (!res.ok) throw new Error();
+    const data = await res.json();
+    if (!Array.isArray(data) || data.length === 0) return mockLowongan;
+    return data.map((row, i) => ({
+      id: row.id || String(i + 1),
+      judul: row.judul || "",
+      perusahaan: row.perusahaan || "",
+      industri: row.industri || "",
+      tipe: row.tipe || "Full-time",
+      kota: row.kota || "",
+      deskripsi: row.deskripsi || "",
+      kontak: row.kontak || "",
+      poster_nama: row.poster_nama || "",
+      deadline: row.deadline || "",
+      created_at: row.created_at || "",
+    }));
+  } catch {
+    return mockLowongan;
   }
 }
 

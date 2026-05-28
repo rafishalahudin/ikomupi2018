@@ -40,7 +40,7 @@ const features = [
     title: "Peluang Karir",
     description:
       "Kolaborasi dan referensi pekerjaan antar sesama alumni lintas industri.",
-    to: "/setelah-toga",
+    to: "/karir",
   },
   {
     icon: BookOpen,
@@ -48,6 +48,7 @@ const features = [
     description:
       "Cerita, tips, dan pelajaran nyata dari alumni IKOM 2018 tentang hidup setelah wisuda.",
     to: "/setelah-toga",
+    featured: true,
   },
 ];
 
@@ -90,13 +91,33 @@ function StatCard({ icon: Icon, value, label }) {
   );
 }
 
-function FeatureCard({ icon: Icon, title, description, to }) {
+function FeatureCard({ icon: Icon, title, description, to, featured }) {
+  if (featured) {
+    return (
+      <Link
+        to={to}
+        className="group relative col-span-full overflow-hidden rounded-2xl border border-white/8 bg-stone-900/70 p-8 backdrop-blur-sm transition-all duration-300 hover:border-amber-500/25 hover:bg-stone-900 hover:shadow-2xl hover:shadow-amber-500/5"
+      >
+        <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-amber-500/60 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+        <div className="flex items-center gap-6">
+          <div className="shrink-0 inline-flex h-14 w-14 items-center justify-center rounded-xl border border-amber-500/20 bg-amber-500/10 text-amber-400 transition-all duration-300 group-hover:border-amber-500/40 group-hover:bg-amber-500/15 group-hover:text-amber-300">
+            <Icon className="h-6 w-6" />
+          </div>
+          <div>
+            <h3 className="mb-1 text-base font-semibold text-stone-100">{title}</h3>
+            <p className="text-sm leading-relaxed text-stone-500">{description}</p>
+          </div>
+          <ArrowRight className="ml-auto shrink-0 h-5 w-5 text-stone-600 transition-colors group-hover:text-amber-400" />
+        </div>
+      </Link>
+    );
+  }
+
   return (
     <Link
       to={to}
       className="group relative overflow-hidden rounded-2xl border border-white/8 bg-stone-900/70 p-8 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-amber-500/25 hover:bg-stone-900 hover:shadow-2xl hover:shadow-amber-500/5"
     >
-      {/* Hover — amber gradient top line */}
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-amber-500/60 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
       <div className="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-xl border border-amber-500/20 bg-amber-500/10 text-amber-400 transition-all duration-300 group-hover:border-amber-500/40 group-hover:bg-amber-500/15 group-hover:text-amber-300">
         <Icon className="h-5 w-5" />

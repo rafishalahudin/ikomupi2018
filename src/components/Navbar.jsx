@@ -5,10 +5,11 @@ import { Menu, X } from "lucide-react";
 const links = [
   { to: "/", label: "Home" },
   { to: "/directory", label: "Direktori" },
-  { to: "/organisasi", label: "Organisasi" },
+  // { to: "/organisasi", label: "Organisasi" },
   // { to: "/calon-ketua", label: "Calon Ketua" },
   { to: "/events", label: "Event" },
   { to: "/setelah-toga", label: "Setelah Toga", startsWith: true },
+  { to: "/karir", label: "Karir" },
   { to: "/register", label: "Daftar" },
 ];
 
